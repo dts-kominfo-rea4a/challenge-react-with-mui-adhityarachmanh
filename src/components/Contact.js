@@ -21,10 +21,8 @@ const Contact = ({ data }) => {
         />
       </ListItemAvatar>
       <Box sx={{ marginLeft: "1.5rem" }} textAlign="left">
-        <Typography variant="body1" component="div">
-          {name}
-        </Typography>
-        <Typography variant="subtitle1" component="div" color="text.secondary">
+        <Typography variant="body1">{name}</Typography>
+        <Typography variant="subtitle1" color="text.secondary">
           {phone}
         </Typography>
         <Typography variant="subtitle1" color="text.secondary">

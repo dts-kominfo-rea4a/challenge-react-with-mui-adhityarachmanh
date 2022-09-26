@@ -27,8 +27,8 @@ const ContactForm = ({ addContact }) => {
 
   const [newContact, setNewContact] = useState(initialState);
 
-  const handleChange = (name, value) =>
-    setNewContact({ ...newContact, [name]: value });
+  const handleChange = (e) =>
+    setNewContact({ ...newContact, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -48,7 +48,7 @@ const ContactForm = ({ addContact }) => {
                 label="Name"
                 name="name"
                 value={newContact.name}
-                onChange={(e) => handleChange("name", e.target.value)}
+                onChange={handleChange}
               />
             </FormControl>
             <FormControl fullWidth margin="normal">
@@ -59,7 +59,7 @@ const ContactForm = ({ addContact }) => {
                 label="Phone"
                 name="phone"
                 value={newContact.phone}
-                onChange={(e) => handleChange("phone", e.target.value)}
+                onChange={handleChange}
               />
             </FormControl>
             <FormControl fullWidth margin="normal">
@@ -70,7 +70,7 @@ const ContactForm = ({ addContact }) => {
                 label="Email"
                 name="email"
                 value={newContact.email}
-                onChange={(e) => handleChange("email", e.target.value)}
+                onChange={handleChange}
               />
             </FormControl>
             <FormControl fullWidth margin="normal">
@@ -81,7 +81,7 @@ const ContactForm = ({ addContact }) => {
                 label="Photo Url"
                 name="photo"
                 value={newContact.photo}
-                onChange={(e) => handleChange("photo", e.target.value)}
+                onChange={handleChange}
               />
             </FormControl>
           </CardContent>

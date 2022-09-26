@@ -1,5 +1,5 @@
 // Adhitya Rachman Hidayatullah
-import { Card, CardContent, Grid } from "@mui/material";
+import { Card, CardContent, Grid, List } from "@mui/material";
 import { useState } from "react";
 import "./App.css";
 import Contact from "./components/Contact";
@@ -30,9 +30,11 @@ const App = () => {
         <Grid item md={6}>
           <Card sx={{ maxWidth: 600, backgroundColor: "#f3f1eb" }}>
             <CardContent>
-              {contacts.map((contact, index) => (
-                <Contact key={index} data={contact} />
-              ))}
+              <List>
+                {contacts.map((contact, index) => (
+                  <Contact key={index} data={contact} />
+                ))}
+              </List>
             </CardContent>
           </Card>
         </Grid>

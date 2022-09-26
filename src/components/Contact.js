@@ -2,14 +2,7 @@
 // Terima props lalu tampilkan dalam Contact component
 // Contact component dapat berupa MUI ListItem
 // https://mui.com/material-ui/react-list/#folder-list
-import {
-  Avatar,
-  Divider,
-  Grid,
-  ListItem,
-  ListItemAvatar,
-  Typography,
-} from "@mui/material";
+import { Avatar, ListItem, ListItemAvatar, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 
@@ -19,7 +12,7 @@ const Contact = ({ data }) => {
   // Contact berisi foto, nama, telepon, dan email
   const { photo, name, phone, email } = data;
   return (
-    <ListItem divider>
+    <ListItem sx={{ paddingBottom: "1rem", paddingTop: "1rem" }} divider>
       <ListItemAvatar>
         <Avatar
           alt="Contact Photo"
